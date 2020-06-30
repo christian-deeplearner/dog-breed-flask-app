@@ -1,3 +1,4 @@
+import os
 from flask import Flask, request, render_template
 app = Flask(__name__)
 
@@ -17,4 +18,8 @@ def hello_world():
         image = file.read()
         dog_breed = get_dog_breed_name(image_bytes=image)
         print(dog_breed)
-        return render_template('results.html', breed=dog_breed)
+
+
+if __name__ == '__main__':
+    server_port = os.environ.get('PORT', '8080')
+    app.run(debug=False, port=server_port, host='0.0.0.0')
