@@ -2,17 +2,17 @@ import io
 
 import torch
 import torch.nn as nn
-from torchvision import models
+import torchvision.models as models
 
 from PIL import Image
 import torchvision.transforms as transforms
 
 def get_model():
-    checkpoint_path = 'checkpoint_final.pth'
+    checkpoint_path = 'model_checkpoint.pt'
     model = models.resnet50(pretrained=True)
     fc = nn.Linear(2048, 133)
     model.fc = fc
-    model.load_state_dict(torch.load(checkpoint_path, map_location='cpu', strict=False))
+    model.load_state_dict(torch.load(checkpoint_path, map_location='cpu'))
     model.eval()
     return model
 
@@ -26,3 +26,7 @@ def get_tensor(image_bytes):
 
     image = Image.open(io.BytesIO(image_bytes))
     return image_transforms(image).unsqueeze(0)
+
+if __name__ == '__main__':
+    model = get_model()
+    print(model)
