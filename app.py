@@ -6,9 +6,9 @@ from commons import get_model
 from inference import get_dog_breed_name
 
 @app.route('/', methods=['GET', 'POST'])
-def hello_world():
+def dog_breed_prediction():
     if request.method == 'GET':
-        return render_template('index.html', value='hi')
+        return render_template('index.html')
     if request.method == 'POST':
         print(request.files)
         if 'file' not in request.files:

@@ -1,6 +1,6 @@
 
 # Dog Breed Classifier
-This simple web app take an uploaded user image of a dog and returns the predicted breed of it based on 133 different dog breeds. You can view the app [here](https://cnn-dog-breed-7yqyr6ojaq-uw.a.run.app).
+This simple web app take an uploaded user image of a dog and returns the predicted breed of it based on 133 different dog breeds. You can view the app [here](https://cnn-dog-breed-7yqyr6ojaq-uw.a.run.app). Flask app based off [The brilliant beginner’s guide to model deployment](https://heartbeat.fritz.ai/brilliant-beginners-guide-to-model-deployment-133e158f6717) and Google Cloud Run Flask starter.
 
 ----
 
