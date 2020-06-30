@@ -1,6 +1,6 @@
 
 # Dog Breed Classifier
-This simple web app take an uploaded user image of a dog and returns the predicted breed of it based on 133 different dog breeds. You can view the app (here)[https://cnn-dog-breed-7yqyr6ojaq-uw.a.run.app].
+This simple web app take an uploaded user image of a dog and returns the predicted breed of it based on 133 different dog breeds. You can view the app [here](https://cnn-dog-breed-7yqyr6ojaq-uw.a.run.app).
 
 ----
 
