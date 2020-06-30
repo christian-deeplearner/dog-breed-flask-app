@@ -8,8 +8,8 @@ from PIL import Image
 import torchvision.transforms as transforms
 
 def get_model():
-    checkpoint_path = 'model_checkpoint.pt'
-    model = models.resnet50(pretrained=True)
+    checkpoint_path = './models/model_checkpoint.pt'
+    model = models.resnet50(pretrained=False)
     fc = nn.Linear(2048, 133)
     model.fc = fc
     model.load_state_dict(torch.load(checkpoint_path, map_location='cpu'))

@@ -18,6 +18,7 @@ def hello_world():
         image = file.read()
         dog_breed = get_dog_breed_name(image_bytes=image)
         print(dog_breed)
+        return render_template('results.html', breed=dog_breed)
 
 
 if __name__ == '__main__':
